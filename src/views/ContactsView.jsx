@@ -1,10 +1,10 @@
-/* import { useEffect, useState } from 'react';
-import ContactForm from './components/ContactForm';
-import ContactList from './components/ContactList';
-import Filter from './components/Filter';
+import { useEffect, useState } from 'react';
+import ContactForm from '../components/ContactForm';
+import ContactList from '../components/ContactList';
+import Filter from '../components/Filter';
 import { useDispatch, useSelector } from 'react-redux';
-import { authOperations } from './redux/auth';
-import { contactsOperations, contactsSelectors } from './redux/contacts';
+import { authOperations } from '../redux/auth';
+import {contactsOperations, contactsSelectors } from '../redux/contacts';
 
 
 export default function ContactsView() { 
@@ -13,10 +13,13 @@ export default function ContactsView() {
   const [filter, setFilter] = useState('');
   const dispatch = useDispatch();
 
- 
   useEffect(() => {
-  dispatch(authOperations.fetchCurrentUser())
-}, [dispatch])
+    dispatch(authOperations.fetchCurrentUser())
+  }, [dispatch])
+  
+  useEffect(() => {
+    dispatch(contactsOperations.fetchContacts())
+  }, [dispatch]) 
 
   const changeFilter = e => {
     setFilter(e.currentTarget.value);
@@ -49,4 +52,3 @@ export default function ContactsView() {
 
 
 
- */

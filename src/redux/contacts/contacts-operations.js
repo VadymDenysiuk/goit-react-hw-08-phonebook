@@ -20,7 +20,6 @@ const fetchContacts = () => async dispatch => {
     dispatch(fetchContactsSuccess(data));
     
   } catch (error) {
-    console.log('rerr');
     dispatch(fetchContactsError(error.message));
   }
 };

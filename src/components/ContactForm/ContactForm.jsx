@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import { Form, Label, Input, Button } from './ContactForm.styled';
-// import { useCreateContactMutation } from '../../redux/contacts/contact-slice';
 import toast from 'react-hot-toast';
 import { contactsOperations } from '../../redux/contacts';
 import { useDispatch } from 'react-redux';

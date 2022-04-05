@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import { contactsOperations } from '../../redux/contacts';
-import { useDeleteContactMutation } from '../../redux/contacts/contact-slice';
 import { useDispatch } from 'react-redux';
 import { Text, Button, Item } from './ContactItem.styled';
 
